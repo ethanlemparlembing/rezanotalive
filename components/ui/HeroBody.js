@@ -57,7 +57,7 @@ export default function HeroBody() {
               Photographer or Web Developer
             </p>
             <p className="text-lg font-normal text-white" ref={textParfFour}>
-              Based in indonesian
+              Based in Indonesian
             </p>
           </div>
           <div className="absolute bottom-0 flex h-20 w-full items-center justify-end gap-3 p-5">
