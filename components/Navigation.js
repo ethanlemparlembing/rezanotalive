@@ -1,47 +1,47 @@
-import { useEffect, useState } from "react";
-import NavbarLink from "./ui/NavbarLink";
+import { useEffect, useState } from "react"
+import NavbarLink from "./ui/NavbarLink"
 
 export default function Navigation() {
-  const [openCanvaMenu, setOpenCanvaMenu] = useState(false);
+  const [openCanvaMenu, setOpenCanvaMenu] = useState(false)
 
   const toggleOpenCanvaMenu = () => {
-    setOpenCanvaMenu((prevOpenCanvaMenu) => !prevOpenCanvaMenu);
-  };
+    setOpenCanvaMenu((prevOpenCanvaMenu) => !prevOpenCanvaMenu)
+  }
 
   useEffect(() => {
     const handleOverflowHidden = () => {
       if (openCanvaMenu) {
-        document.body.classList.add("overflow-hidden");
+        document.body.classList.add("overflow-hidden")
       } else {
-        document.body.classList.remove("overflow-hidden");
+        document.body.classList.remove("overflow-hidden")
       }
-    };
+    }
 
-    handleOverflowHidden();
+    handleOverflowHidden()
 
     return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, [openCanvaMenu]);
+      document.body.classList.remove("overflow-hidden")
+    }
+  }, [openCanvaMenu])
 
   return (
     <>
-      <nav className="fixed left-0 top-0 h-16 w-full bg-white shadow-md z-10">
-        <div className="max-w-6xl mx-auto h-full flex items-center px-10">
-          <div className="flex h-full w-full flex-row items-center justify-between">
+      <nav className='fixed left-0 top-0 z-10 h-16 w-full bg-white'>
+        <div className='mx-auto flex h-full max-w-6xl items-center px-10'>
+          <div className='flex h-full w-full flex-row items-center justify-between'>
             <div>
-              <a href="" className="text-lg font-bold">
+              <a href='' className='text-lg font-bold'>
                 Rezanotalive
               </a>
             </div>
-            <div className="hidden gap-3 sm:flex">
+            <div className='hidden gap-3 sm:flex'>
               <NavbarLink>Project</NavbarLink>
               <NavbarLink>TodosApp</NavbarLink>
             </div>
-            <div className="sm:hidden">
+            <div className='sm:hidden'>
               <button
                 onClick={toggleOpenCanvaMenu}
-                className="text-base font-semibold"
+                className='text-base font-semibold'
               >
                 Menu
               </button>
@@ -50,11 +50,11 @@ export default function Navigation() {
         </div>
       </nav>
       {openCanvaMenu && (
-        <nav className="fixed h-screen top-0 w-full bg-black z-50">
-          <div className="h-16 bg-white flex justify-end px-10 max-w-6xl mx-auto">
+        <nav className='fixed top-0 z-50 h-screen w-full bg-black'>
+          <div className='mx-auto flex h-16 max-w-6xl justify-end bg-white px-10'>
             <button
               onClick={toggleOpenCanvaMenu}
-              className="text-base font-semibold"
+              className='text-base font-semibold'
             >
               Close
             </button>
@@ -62,5 +62,5 @@ export default function Navigation() {
         </nav>
       )}
     </>
-  );
+  )
 }
