@@ -2,6 +2,7 @@ import { forwardRef } from "react"
 import Footer from "./ui/Footer"
 import Header from "./ui/Header"
 import Head from "next/head"
+import ToggleUpPage from "./ui/ToggleUpPage"
 
 const AppLayout = forwardRef(function AppLayout({ children }, ref) {
   return (
@@ -17,6 +18,7 @@ const AppLayout = forwardRef(function AppLayout({ children }, ref) {
         {children}
       </div>
       <Footer />
+      <ToggleUpPage />
     </div>
   )
 })

@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <>
       <nav className='fixed left-0 top-0 z-10 h-16 w-full bg-white'>
-        <div className='mx-auto flex h-full max-w-6xl items-center px-10'>
+        <div className='mx-auto flex h-full max-w-6xl items-center px-6 sm:px-10'>
           <div className='flex h-full w-full flex-row items-center justify-between'>
             <div>
               <a href='' className='text-lg font-bold'>
@@ -50,8 +50,8 @@ export default function Navigation() {
         </div>
       </nav>
       {openCanvaMenu && (
-        <nav className='fixed top-0 z-50 h-screen w-full bg-black'>
-          <div className='mx-auto flex h-16 max-w-6xl justify-end bg-white px-10'>
+        <nav className='fixed top-0 z-50 h-screen w-full bg-black sm:hidden'>
+          <div className='mx-auto flex h-16 max-w-6xl justify-end bg-white px-6'>
             <button
               onClick={toggleOpenCanvaMenu}
               className='text-base font-semibold'
