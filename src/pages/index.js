@@ -2,7 +2,7 @@ import dynamic from "next/dynamic"
 import AppLayout from "../../components/AppLayout"
 import cloudinary from "../../utils/cloudinary"
 import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 
 const WithCustomLoading = dynamic(() => import("./services/Images"), {
@@ -40,22 +40,6 @@ export default function Index({ images }) {
     }
   }, [images, items.length, page])
 
-  const handleScroll = useCallback(() => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop !==
-        document.documentElement.offsetHeight ||
-      isLoading
-    ) {
-      return
-    }
-    fetchData()
-  }, [fetchData, isLoading])
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [handleScroll, isLoading])
-
   // Rest of your code...
 
   return (
@@ -64,6 +48,7 @@ export default function Index({ images }) {
         dataLength={items.length}
         next={fetchData}
         hasMore={hasMore} // Replace with a condition based on your data source
+        // height={500}
         // loader={<p>Loading...</p>}
         // endMessage={<p>No more data to load.</p>}
       >
@@ -80,6 +65,7 @@ export const getStaticProps = async () => {
     .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
     .sort_by("public_id", "desc")
     .max_results(500)
+    .next_cursor()
     .execute()
 
   const reducedResults = resources.map((result, i) => ({
