@@ -23,7 +23,7 @@ export default function Images({ images }) {
           {group.map(({ id, public_id, blurDataUrl }) => (
             <div
               key={id}
-              className=' h-auto max-w-full overflow-hidden rounded-lg'
+              className=' h-auto max-w-full overflow-hidden rounded-lg will-change-auto'
             >
               <Image
                 src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.jpg`}
