@@ -2,60 +2,20 @@ import dynamic from "next/dynamic"
 import AppLayout from "../../components/AppLayout"
 import cloudinary from "../../utils/cloudinary"
 import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
-import { useCallback, useState } from "react"
-import InfiniteScroll from "react-infinite-scroll-component"
+import Images from "./services/Images"
+import { useEffect } from "react"
 
-const WithCustomLoading = dynamic(() => import("./services/Images"), {
-  loading: () => <p>Loading..{console.log("loading")} </p>,
-})
+// const WithCustomLoading = dynamic(() => import("./services/Images"), {
+//   loading: () => <p>Loading..{console.log("loading")} </p>,
+// })
 
 export default function Index({ images }) {
-  const [items, setItems] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(null)
-  const [hasMore, setHasMore] = useState(true)
-  const [page, setPage] = useState(0)
-
-  const fetchData = useCallback(async () => {
-    setIsLoading(true)
-    setError(null)
-
-    if (items.length >= 71) {
-      setHasMore(false)
-      return
-    }
-
-    const groupedArray = []
-    for (let i = 0; i < images.length; i += 12) {
-      groupedArray.push(images.slice(i, i + 12))
-    }
-
-    try {
-      setItems((prevItems) => [...prevItems, ...groupedArray[page]])
-      setPage((prevPage) => prevPage + 1)
-    } catch (error) {
-      setError(error)
-    } finally {
-      setIsLoading(false)
-    }
-  }, [images, items.length, page])
-
-  // Rest of your code...
+  // useEffect(() => console.log(images), [images])
 
   return (
     <AppLayout>
-      <InfiniteScroll
-        dataLength={items.length}
-        next={fetchData}
-        hasMore={hasMore} // Replace with a condition based on your data source
-        // height={500}
-        // loader={<p>Loading...</p>}
-        // endMessage={<p>No more data to load.</p>}
-      >
-        <WithCustomLoading images={items} />
-      </InfiniteScroll>
-      {error && <p>Error: {error.message}</p>}
-      {/* <Observer /> */}
+      <Images images={images} />
+      {/* <WithCustomLoading images={images} /> */}
     </AppLayout>
   )
 }
