@@ -1,57 +1,91 @@
 export default function Footer() {
   return (
-    <div className=' bg-black text-white '>
-      <div className='mx-auto flex min-h-[calc(100vh-4rem)] w-screen max-w-6xl flex-col justify-around px-6 py-5 sm:min-h-fit sm:flex-row sm:justify-between sm:py-10 '>
-        <div className='max-w-sm'>
-          <div className='divide-y'>
-            <div className='space-y-3 pb-4'>
-              <h2 className='text-base font-bold'>Rezanotalive</h2>
-              <p className='text-sm font-normal'>
-                Hello, my name is Petrus Reza Prasetya W and I am a passionate
-                photographer and web developer. I have always been fascinated by
-                the power of visual storytelling and love capturing moments that
-                tell a unique story.
-              </p>
+    <div className='bg-black text-white'>
+      <div className='mx-auto max-w-6xl px-5 py-10'>
+        <div className='flex h-full w-full flex-col  justify-between gap-3'>
+          <div className='flex w-full flex-col justify-between gap-5 p-5 sm:flex-row sm:gap-8'>
+            <div className=' w-full py-5 sm:w-5/12'>
+              <div className=' space-y-5'>
+                <h2 className='text-lg font-bold '>Rezanotalive</h2>
+                <p className='text-sm font-semibold leading-relaxed text-slate-200'>
+                  Hello, my name is Petrus Reza Prasetya W and I am a passionate
+                  photographer and web developer. I have always been fascinated
+                  by the power of visual storytelling and love capturing moments
+                  that tell a unique story.
+                </p>
+              </div>
             </div>
-            <h3 className='pt-3 text-base font-normal'>
-              Created with 💙 by{" "}
+            <div className=' w-full py-5 sm:w-2/12'>
+              <div className=' space-y-5'>
+                <h2 className='text-lg font-bold'>Sitemap</h2>
+                <ul className='flex flex-col gap-3 text-sm font-semibold text-slate-200'>
+                  <li>About</li>
+                  <li>Blog</li>
+                  <li>Photos</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
+            <div className=' w-full py-5 sm:w-5/12'>
+              <div className=' space-y-10'>
+                <h2 className='text-2xl font-bold'>
+                  Subscribe to get tips and tactics to grow the way you want.
+                </h2>
+                <form action=' ' className=' flex flex-col   md:flex-row '>
+                  <input
+                    type='email'
+                    name=''
+                    id=''
+                    className='w-full border-2 border-black p-3 '
+                    placeholder='Your Email Address'
+                  />
+                  <button className='-my-1 inline-flex items-center justify-center border-2  border-black bg-red-300 p-3 md:-m-0 md:-ml-1'>
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className='flex  w-full flex-col justify-between gap-12 p-5 sm:flex-row-reverse'>
+            <div className=' w-full py-5 sm:w-2/3'>
+              <div className='flex w-full justify-between '>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    className='h-8 w-8'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z' />
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    className='h-8 w-8'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z' />
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    className='h-8 w-8'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z' />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className=' flex w-full items-center py-5'>
+              Created with 💙 by &nbsp;
               <a href=''>
                 <b>Rezanotalive</b>
               </a>
-            </h3>
-          </div>
-        </div>
-        <div className=' flex flex-col gap-3'>
-          <h2 className='text-base font-bold'>Sitemap</h2>
-          <ul className='space-y-1'>
-            <li>
-              <a href='' className='text-base font-semibold hover:underline'>
-                About
-              </a>
-            </li>
-            <li>
-              <a href='' className='text-base font-semibold hover:underline'>
-                Photos
-              </a>
-            </li>
-            <li>
-              <a href='' className='text-base font-semibold hover:underline'>
-                Projects
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className='space-y-3'>
-          <h2 className='font-bold'>Contact</h2>
-          <div className='flex flex-col gap-1'>
-            <div className='text-base font-semibold'>
-              Email:{" "}
-              <a href='mailto:hai.rezaprasetya@gmail.com'>
-                hai.rezaprasetya@gmail.com
-              </a>
-            </div>
-            <div className='text-base font-semibold'>
-              Phone: <a href=''>+62 6969 6969</a>
             </div>
           </div>
         </div>
