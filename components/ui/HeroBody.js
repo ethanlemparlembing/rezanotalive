@@ -18,8 +18,15 @@ export default function HeroBody() {
         textParfThree.current,
         textParfFour.current,
       ],
-      { y: 10, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", duration: 1 }
+      { y: 10, autoAlpha: 0 },
+      {
+        y: 0,
+        autoAlpha: 1,
+        stagger: 0.4,
+        ease: "power2.out",
+        duration: 0.5,
+        delay: 1,
+      }
     )
 
     gsap.to(bodyRef.current, { opacity: 1 })

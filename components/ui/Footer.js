@@ -29,20 +29,12 @@ export default function Footer() {
             <div className=' w-full py-5 sm:w-5/12'>
               <div className=' space-y-10'>
                 <h2 className='text-2xl font-bold'>
-                  Subscribe to get tips and tactics to grow the way you want.
+                  Let&apos;s collaborate! Send me a message, and together, we
+                  can create something amazing.
                 </h2>
-                <form action=' ' className=' flex flex-col   md:flex-row '>
-                  <input
-                    type='email'
-                    name=''
-                    id=''
-                    className='w-full border-2 border-black p-3 '
-                    placeholder='Your Email Address'
-                  />
-                  <button className='-my-1 inline-flex items-center justify-center border-2  border-black bg-red-300 p-3 md:-m-0 md:-ml-1'>
-                    Send
-                  </button>
-                </form>
+                <button className='w-32 rounded-full border-2 px-4 py-3 font-semibold hover:bg-white hover:text-black'>
+                  Message
+                </button>
               </div>
             </div>
           </div>

@@ -1,9 +1,7 @@
-import dynamic from "next/dynamic"
 import AppLayout from "../../components/AppLayout"
 import cloudinary from "../../utils/cloudinary"
 import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
 import Images from "./services/Images"
-import { useEffect } from "react"
 
 // const WithCustomLoading = dynamic(() => import("./services/Images"), {
 //   loading: () => <p>Loading..{console.log("loading")} </p>,
