@@ -1,10 +1,9 @@
-import { forwardRef } from "react"
 import Footer from "./ui/Footer"
 import Header from "./ui/Header"
 import Head from "next/head"
 import ToggleUpPage from "./ui/ToggleUpPage"
 
-const AppLayout = forwardRef(function AppLayout({ children }, ref) {
+const AppLayout = ({ children }) => {
   return (
     <div className='antialiased'>
       <Head>
@@ -14,13 +13,11 @@ const AppLayout = forwardRef(function AppLayout({ children }, ref) {
         <meta property='og:title' content='Rezanotalive' key='title' />
       </Head>
       <Header />
-      <div className='mx-auto max-w-6xl px-5 pb-10' ref={ref}>
-        {children}
-      </div>
+      <div className='mx-auto max-w-6xl px-5 pb-10'>{children}</div>
       <Footer />
       <ToggleUpPage />
     </div>
   )
-})
+}
 
 export default AppLayout

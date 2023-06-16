@@ -27,18 +27,18 @@ export default function Navigation() {
   return (
     <>
       <nav className='fixed left-0 top-0 z-10 h-16 w-full bg-white'>
-        <div className='mx-auto flex h-full max-w-6xl items-center px-6 sm:px-10'>
+        <div className='mx-auto flex h-full max-w-6xl items-center px-5'>
           <div className='flex h-full w-full flex-row items-center justify-between'>
-            <div>
+            <div className='container px-0 sm:px-5'>
               <a href='' className='text-lg font-bold'>
                 Rezanotalive
               </a>
             </div>
-            <div className='hidden gap-3 sm:flex'>
+            <div className='hidden gap-3 px-0 sm:flex sm:px-5'>
               <NavbarLink>Project</NavbarLink>
               <NavbarLink>TodosApp</NavbarLink>
             </div>
-            <div className='sm:hidden'>
+            <div className='px-0 sm:hidden sm:px-5'>
               <button
                 onClick={toggleOpenCanvaMenu}
                 className='text-base font-semibold'
@@ -49,15 +49,36 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
+
       {openCanvaMenu && (
-        <nav className='fixed top-0 z-50 h-screen w-full bg-black sm:hidden'>
-          <div className='mx-auto flex h-16 max-w-6xl justify-end bg-white px-6'>
-            <button
-              onClick={toggleOpenCanvaMenu}
-              className='text-base font-semibold'
-            >
-              Close
-            </button>
+        <nav className='fixed inset-0 z-50 h-screen w-full overflow-hidden bg-black sm:hidden '>
+          <div className='container flex h-16 items-center justify-end  px-5'>
+            <div className=' border-b-2 py-2'>
+              <button
+                onClick={toggleOpenCanvaMenu}
+                className='font-semibold text-white'
+              >
+                Close
+              </button>
+            </div>
+          </div>
+          <div className='container h-[calc(100vh-4rem)]  '>
+            <div className='flex h-full items-center'>
+              <div className=' container p-5'>
+                <div className='border-b-2 py-5 text-5xl font-semibold uppercase text-white first:border-y-2'>
+                  About
+                </div>
+                <div className='border-b-2 py-5 text-5xl font-semibold uppercase text-white first:border-y-2'>
+                  Blog
+                </div>
+                <div className='border-b-2 py-5 text-5xl font-semibold uppercase text-white first:border-y-2'>
+                  Photos
+                </div>
+                <div className='border-b-2 py-5 text-5xl font-semibold uppercase text-white first:border-y-2'>
+                  Contact
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       )}

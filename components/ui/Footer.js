@@ -3,9 +3,9 @@ export default function Footer() {
     <div className='bg-black text-white'>
       <div className='mx-auto max-w-6xl px-5 py-10'>
         <div className='flex h-full w-full flex-col justify-between gap-3'>
-          <div className='mx-auto flex max-w-full  flex-col justify-between gap-5 p-5 sm:flex-row sm:gap-8'>
-            <div className='container py-5 '>
-              <div className='space-y-5 '>
+          <div className='mx-auto flex max-w-full flex-col justify-between gap-5 p-5 sm:flex-row sm:gap-8'>
+            <div className='container py-5'>
+              <div className='space-y-5'>
                 <h2 className='text-lg font-bold'>Rezanotalive</h2>
                 <p className='text-sm font-semibold leading-relaxed text-slate-200'>
                   Hello, my name is Petrus Reza Prasetya W and I am a passionate
@@ -15,7 +15,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className='container py-5 '>
+            <div className='container py-5'>
               <div className='space-y-5'>
                 <h2 className='text-lg font-bold'>Sitemap</h2>
                 <ul className='flex flex-col gap-3 text-sm font-semibold text-slate-200'>
@@ -26,20 +26,20 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className='container py-5 '>
+            <div className='container py-5'>
               <div className='space-y-10'>
                 <h2 className='text-2xl font-bold'>
                   Let&apos;s collaborate! Send me a message, and together, we
                   can create something amazing.
                 </h2>
-                <button className='w-32 rounded-full border-2 px-4 py-3 font-semibold hover:bg-white hover:text-black'>
+                <button className='inline-flex w-40 items-center justify-center rounded-full border-2 border-white px-4 py-3 text-sm font-semibold hover:bg-white hover:text-black'>
                   Get In Touch
                 </button>
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-5 p-5 sm:flex-row-reverse sm:gap-8 '>
-            <div className='container py-5 '>
+          <div className='flex flex-col gap-5 p-5 sm:flex-row-reverse sm:gap-8'>
+            <div className='container py-5'>
               <div className='flex justify-between'>
                 <div>
                   <svg
