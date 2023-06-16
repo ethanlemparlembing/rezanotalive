@@ -2,14 +2,9 @@ import AppLayout from "../../components/AppLayout"
 import cloudinary from "../../utils/cloudinary"
 import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
 import Images from "./services/Images"
-
-// const WithCustomLoading = dynamic(() => import("./services/Images"), {
-//   loading: () => <p>Loading..{console.log("loading")} </p>,
-// })
+// import Images from "./services/Images"
 
 export default function Index({ images }) {
-  // useEffect(() => console.log(images), [images])
-
   return (
     <AppLayout>
       <Images images={images} />
