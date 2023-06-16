@@ -29,8 +29,8 @@ export default function Footer() {
             <div className='container py-5 '>
               <div className='space-y-10'>
                 <h2 className='text-2xl font-bold'>
-                  Let's collaborate! Send me a message, and together, we can
-                  create something amazing.
+                  Let&apos;s collaborate! Send me a message, and together, we
+                  can create something amazing.
                 </h2>
                 <button className='w-32 rounded-full border-2 px-4 py-3 font-semibold hover:bg-white hover:text-black'>
                   Get In Touch
