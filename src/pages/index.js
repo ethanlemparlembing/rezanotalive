@@ -7,7 +7,7 @@ import Images from "./services/Images"
 export default function Index({ images }) {
   return (
     <AppLayout>
-      <Images images={images} />
+      {<Images images={images} />}
       {/* <WithCustomLoading images={images} /> */}
     </AppLayout>
   )
