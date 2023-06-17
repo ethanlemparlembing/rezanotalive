@@ -2,13 +2,13 @@ import AppLayout from "../../components/AppLayout"
 import cloudinary from "../../utils/cloudinary"
 import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
 import Images from "./services/Images"
-// import Images from "./services/Images"
 
 export default function Index({ images }) {
   return (
     <AppLayout>
-      {<Images images={images} />}
-      {/* <WithCustomLoading images={images} /> */}
+      <div className='px-0 sm:px-5'>
+        <Images images={images} />
+      </div>
     </AppLayout>
   )
 }
