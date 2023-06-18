@@ -33,7 +33,7 @@ export default function HeroBody() {
   }, [])
 
   return (
-    <div className='mt-16 h-[calc(100dvw-4rem)] opacity-0' ref={bodyRef}>
+    <div className='mt-16 h-[calc(100dvh-4rem)] opacity-0' ref={bodyRef}>
       <div className='mx-auto h-full max-w-6xl px-5 pb-5'>
         <div className='relative flex h-full w-full overflow-hidden rounded-xl bg-white'>
           <div className='absolute h-full w-full'>
