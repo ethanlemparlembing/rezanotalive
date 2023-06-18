@@ -67,7 +67,7 @@ export default function HeroBody() {
               Based in Indonesian
             </p>
           </div>
-          <div className='absolute bottom-0 flex h-20 w-full items-center justify-end gap-3 p-5'>
+          <div className='absolute bottom-16 flex h-20 w-full items-center justify-start gap-3 px-10 py-5 lg:bottom-0 lg:justify-end'>
             <a
               href=''
               className='group flex h-10 w-10 items-center justify-center rounded-full bg-white hover:bg-black'
