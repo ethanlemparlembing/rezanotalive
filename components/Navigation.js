@@ -29,7 +29,7 @@ export default function Navigation() {
   return (
     <>
       <Navbar onClose={toggleOpenCanvaMenu}>
-        <NavbarLink>Project</NavbarLink>
+        <NavbarLink>Photos</NavbarLink>
         <NavbarLink>TodosApp</NavbarLink>
       </Navbar>
 
