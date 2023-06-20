@@ -5,6 +5,6 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
   reactStrictMode: false,
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
