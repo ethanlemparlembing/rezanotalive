@@ -32,7 +32,7 @@ const AnimatedElement = ({ children }) => {
           }
         })
       },
-      { threshold: 0.5 }
+      { threshold: 1, rootMargin: "0px 0px 20px 0px" }
     )
 
     observer.observe(element)
