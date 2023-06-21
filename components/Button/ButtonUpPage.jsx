@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function ToggleUpPage() {
+export default function ButtonUpPage() {
   const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {

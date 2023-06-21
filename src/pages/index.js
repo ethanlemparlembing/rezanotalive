@@ -1,123 +1,87 @@
 import Image from "next/image"
-import AnimatedElement from "../../components/AnimateMe"
-import AppLayout from "../../components/AppLayout"
+import ButtonUpPage from "../../components/Button/ButtonUpPage"
+import HeroSection from "../../components/HeroSection/HeroSection"
+import Layouts from "../../components/Layouts/Layouts"
 
 export default function Index() {
   return (
-    <AppLayout>
-      <div className='mx-auto flex min-h-screen  max-w-6xl items-center justify-center p-0 lg:p-5'>
-        <div className='flex h-full w-full flex-col items-center justify-center gap-5 sm:gap-10 lg:flex-row'>
-          <div className='container h-1/2 p-5  sm:p-10'>
-            <AnimatedElement>
-              <h2 className='text-2xl font-bold'>The Heading</h2>
-            </AnimatedElement>
-            <AnimatedElement>
-              <p className='mt-5 text-base font-normal leading-relaxed'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                error quisquam ducimus? Harum natus voluptate unde, sapiente
-                autem sunt neque hic nisi facilis molestias exercitationem
-                dolores molestiae nihil! Porro, reiciendis!
-              </p>
-            </AnimatedElement>
-            <AnimatedElement>
-              <button className='mt-5 rounded-full border-2 border-black px-4 py-3 text-sm font-semibold'>
-                Get In Touch
-              </button>
-            </AnimatedElement>
-          </div>
-          <div className='container pb-5 sm:pb-0'>
-            <div className='flex flex-col items-baseline gap-5 sm:flex-row'>
-              <AnimatedElement>
+    <Layouts>
+      <ButtonUpPage />
+      <HeroSection />
+      <div className='mx-auto max-w-6xl space-y-20 py-20'>
+        <div className=' p-5'>
+          <div className='flex w-full flex-col gap-10 sm:flex-row-reverse'>
+            <div className='flex max-w-xl items-center'>
+              <div className='space-y-5 p-0 sm:p-10'>
+                <h2 className='text-2xl font-bold'>The Header</h2>
+                <p className='max-w-lg text-base font-normal leading-relaxed'>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Eligendi sint nam temporibus, nostrum repudiandae hic ad
+                  inventore illum dolorum iure veniam officiis consequuntur a
+                  quidem aliquid beatae porro fugiat suscipit?
+                </p>
+                <button className='flex w-24 items-center justify-center border-[1.5px] border-black px-5 py-2 text-sm font-semibold capitalize hover:bg-black hover:text-white'>
+                  submit
+                </button>
+              </div>
+            </div>
+            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row'>
+              <div>
                 <Image
+                  className='h-full w-full border-[1.5px] border-black'
                   src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-64_td030c.jpg'
                   alt=''
-                  sizes='(max-width: 640px) 100vw,
-          (max-width: 1280px) 50vw,
-          (max-width: 1536px) 33vw,
-          25vw'
-                  width={720}
-                  height={480}
-                  priority
-                  className='h-auto max-w-full rounded-xl'
+                  height={700}
+                  width={500}
                 />
-              </AnimatedElement>
-              <div className='hidden flex-col gap-5 sm:flex'>
-                <AnimatedElement>
-                  <Image
-                    src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-66_wudcqb.jpg'
-                    alt=''
-                    className='h-auto max-w-full rounded-xl'
-                    sizes='(max-width: 640px) 100vw,
-          (max-width: 1280px) 50vw,
-          (max-width: 1536px) 33vw,
-          25vw'
-                    width={720}
-                    height={480}
-                    priority
-                  />
-                </AnimatedElement>
-                <AnimatedElement>
-                  <Image
-                    src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627055/Photos/image-70_bndcsf.jpg'
-                    alt=''
-                    className='h-auto max-w-full rounded-xl'
-                    sizes='(max-width: 640px) 100vw,
-          (max-width: 1280px) 50vw,
-          (max-width: 1536px) 33vw,
-          25vw'
-                    width={720}
-                    height={480}
-                    priority
-                  />
-                </AnimatedElement>
+              </div>
+              <div className='flex flex-col gap-5'>
+                <Image
+                  height={500}
+                  width={700}
+                  className='h-auto max-w-full border-[1.5px] border-black'
+                  src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-66_wudcqb.jpg'
+                  alt=''
+                />
+                <Image
+                  height={500}
+                  width={700}
+                  className='h-auto max-w-full border-[1.5px] border-black'
+                  src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627055/Photos/image-70_bndcsf.jpg'
+                  alt=''
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className='mx-auto flex min-h-screen max-w-6xl items-center justify-center p-0 lg:p-5'>
-        <div className='flex h-full w-full flex-col items-center justify-center gap-5 sm:gap-10 lg:flex-row-reverse'>
-          <div className='container p-5 sm:p-10'>
-            <AnimatedElement>
-              <h2 className='text-2xl font-bold'>The Heading</h2>
-            </AnimatedElement>
-            <AnimatedElement>
-              <p className='mt-5 text-base font-normal leading-relaxed'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                error quisquam ducimus? Harum natus voluptate unde, sapiente
-                autem sunt neque hic nisi facilis molestias exercitationem
-                dolores molestiae nihil! Porro, reiciendis!
-              </p>
-            </AnimatedElement>
-
-            <AnimatedElement>
-              <button className='mt-5 rounded-full border-2 border-black px-4 py-3 text-sm font-semibold'>
-                Get In Touch
-              </button>
-            </AnimatedElement>
-          </div>
-          <div className='container'>
-            <AnimatedElement>
+        <div className=' p-5'>
+          <div className='flex w-full flex-col gap-10 sm:flex-row'>
+            <div className='container flex max-w-xl items-center'>
+              <div className='space-y-5 p-0 sm:p-10'>
+                <h2 className='text-2xl font-bold'>The Header</h2>
+                <p className='max-w-lg text-base font-normal leading-relaxed'>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Eligendi sint nam temporibus, nostrum repudiandae hic ad
+                  inventore illum dolorum iure veniam officiis consequuntur a
+                  quidem aliquid beatae porro fugiat suscipit?
+                </p>
+                <button className='flex w-24 items-center justify-center border-[1.5px] border-black px-5 py-2 text-sm font-semibold capitalize hover:bg-black hover:text-white'>
+                  submit
+                </button>
+              </div>
+            </div>
+            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row'>
               <Image
-                src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-69_gvjdxh.jpg'
+                height={500}
+                width={700}
+                className='h-auto max-w-full border-[1.5px] border-black'
+                src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-66_wudcqb.jpg'
                 alt=''
-                className='container mx-auto rounded-xl object-contain'
-                sizes='(max-width: 640px) 100vw,
-          (max-width: 1280px) 50vw,
-          (max-width: 1536px) 33vw,
-          25vw'
-                width={720}
-                height={480}
-                priority
               />
-            </AnimatedElement>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* <div className='px-0 sm:px-5'>
-        <Images images={images} />
-      </div> */}
-    </AppLayout>
+    </Layouts>
   )
 }
