@@ -3,7 +3,7 @@ export default function Footer() {
     <div className='bg-black py-10 text-white'>
       <div className='mx-auto h-full w-full max-w-6xl p-5'>
         <div className='flex h-full flex-col justify-between border-[1.5px]'>
-          <div className='flex h-full w-full flex-col-reverse md:flex-row'>
+          <div className='flex h-full w-full flex-col-reverse py-10 md:flex-row'>
             <div className='container max-w-md p-5 sm:p-10'>
               <div className='space-y-10'>
                 <h2 className='text-2xl font-bold'>
@@ -129,7 +129,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className='flex w-full flex-col-reverse items-center justify-between gap-5 border-t-[1.5px] p-5 sm:flex-row sm:p-10'>
+          <div className='flex w-full flex-col-reverse items-center justify-between gap-5 border-t-[1.5px] px-5 py-10 sm:flex-row sm:p-10'>
             <div className='container mt-5 text-center sm:mt-0 sm:pt-0 sm:text-start'>
               <h3 className='text-sm'>
                 Developed with 💙 by <b>Rezanotalive</b>
