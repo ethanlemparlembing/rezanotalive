@@ -1,9 +1,37 @@
+import Accordion from "../Accordion/Accordion"
+
 export default function Footer() {
+  const accordionItems = [
+    {
+      title: "Item 1",
+      content: [
+        "Content for item 1 part 1",
+        "Content for item 1 part 2",
+        "Content for item 1 part 3",
+      ],
+    },
+    {
+      title: "Item 2",
+      content: [
+        "Content for item 2 part 1",
+        "Content for item 2 part 2",
+        "Content for item 2 part 3",
+      ],
+    },
+    {
+      title: "Item 3",
+      content: [
+        "Content for item 3 part 1",
+        "Content for item 3 part 2",
+        "Content for item 3 part 3",
+      ],
+    },
+  ]
   return (
     <div className='flex min-h-[calc(100vh-4rem)] items-center bg-black text-white'>
-      <div className='mx-auto flex w-full max-w-6xl flex-col gap-20 p-5'>
+      <div className='mx-auto flex w-full max-w-6xl flex-col gap-10 p-5 sm:gap-20'>
         <div className='flex flex-col gap-10 sm:flex-row'>
-          <div className='container mx-auto flex flex-col gap-10'>
+          <div className='container mx-auto flex flex-col gap-5 sm:gap-10'>
             <h2 className='text-lg font-bold  md:text-sm lg:text-2xl'>
               Let&apos;s collaborate! Send me a message, and together, we can
               create something amazing.
@@ -88,33 +116,12 @@ export default function Footer() {
             </div>
           </div>
           <div className='container mx-auto flex max-w-full flex-col justify-between sm:hidden'>
-            <div className='flex flex-col divide-y-2 border-b-2'>
-              <a
-                href=''
-                className='py-3 text-lg font-semibold  capitalize md:text-sm'
-              >
-                test
-              </a>
-              <a
-                href=''
-                className='py-3 text-lg font-semibold  capitalize md:text-sm'
-              >
-                test
-              </a>
-              <a
-                href=''
-                className='py-3 text-lg font-semibold  capitalize md:text-sm'
-              >
-                test
-              </a>
-            </div>
+            <Accordion items={accordionItems} />
           </div>
           <div className='container mx-auto flex max-w-full flex-row justify-between sm:hidden'>
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -125,8 +132,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -137,8 +142,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -149,8 +152,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -170,8 +171,6 @@ export default function Footer() {
             <div className='text-wh flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -182,8 +181,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -194,8 +191,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'
@@ -206,8 +201,6 @@ export default function Footer() {
             <div className='flex items-center justify-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='{16}'
-                height='{16}'
                 fill='currentColor'
                 className='h-7 w-7'
                 viewBox='0 0 16 16'

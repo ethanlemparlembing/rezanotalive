@@ -28,6 +28,7 @@ export default function Index() {
             <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center  sm:flex-row '>
               <div>
                 <Image
+                  priority
                   className='h-full w-full border-[1.5px] border-black'
                   src='https://res.cloudinary.com/dxpxe6yit/image/upload/v1685627054/Photos/image-64_td030c.jpg'
                   alt=''
@@ -37,6 +38,7 @@ export default function Index() {
               </div>
               <div className='flex flex-col gap-5'>
                 <Image
+                  priority
                   height={500}
                   width={700}
                   className='h-auto max-w-full border-[1.5px] border-black'
@@ -44,6 +46,7 @@ export default function Index() {
                   alt=''
                 />
                 <Image
+                  priority
                   height={500}
                   width={700}
                   className='h-auto max-w-full border-[1.5px] border-black'
@@ -72,6 +75,7 @@ export default function Index() {
             </div>
             <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row '>
               <Image
+                priority
                 height={500}
                 width={700}
                 className='h-auto max-w-full border-[1.5px] border-black'

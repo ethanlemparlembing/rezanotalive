@@ -1,8 +1,5 @@
 import Image from "next/image"
 import photoProfile from "../../public/assets/img/20221030-IMG_5673.jpg"
-import Marquee from "../Animating/Maruqee"
-import VerticalMarquee from "../Animating/Maruqee"
-import VerticalPauseAnimation from "../Animating/Maruqee"
 import Crossfade from "../Animating/Maruqee"
 
 export default function HeroSection() {
@@ -16,6 +13,7 @@ export default function HeroSection() {
               width={500}
               src={photoProfile}
               alt=''
+              priority
               className='h-full w-full  object-cover'
             />
           </div>
