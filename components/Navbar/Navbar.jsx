@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className='mx-auto flex h-full w-full max-w-6xl flex-row items-center justify-between p-5'>
         <div className=''>
           <a href='' className='text-base font-bold'>
-            Brand
+            Rezanotalive
           </a>
         </div>
         <div className='hidden gap-5 sm:flex'>

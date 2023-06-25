@@ -8,10 +8,10 @@ export default function Index() {
     <Layouts>
       <ButtonUpPage />
       <HeroSection />
-      <div className='mx-auto max-w-6xl space-y-20 py-20'>
-        <div className=' p-5'>
-          <div className='flex w-full flex-col gap-10 sm:flex-row-reverse'>
-            <div className='flex max-w-xl items-center'>
+      <div className='mx-auto max-w-6xl space-y-20 px-5 py-20'>
+        <div className='grid min-h-screen place-items-center'>
+          <div className='flex w-full flex-col gap-10 lg:flex-row-reverse'>
+            <div className='container mx-auto flex max-w-xl items-center'>
               <div className='space-y-5 p-0 sm:p-10'>
                 <h2 className='text-2xl font-bold'>The Header</h2>
                 <p className='max-w-lg text-base font-normal leading-relaxed'>
@@ -25,7 +25,7 @@ export default function Index() {
                 </button>
               </div>
             </div>
-            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row'>
+            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center  sm:flex-row '>
               <div>
                 <Image
                   className='h-full w-full border-[1.5px] border-black'
@@ -54,9 +54,9 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className=' p-5'>
-          <div className='flex w-full flex-col gap-10 sm:flex-row'>
-            <div className='container flex max-w-xl items-center'>
+        <div className='grid min-h-screen place-items-center'>
+          <div className='flex w-full flex-col gap-10 lg:flex-row'>
+            <div className='container mx-auto flex max-w-xl items-center'>
               <div className='space-y-5 p-0 sm:p-10'>
                 <h2 className='text-2xl font-bold'>The Header</h2>
                 <p className='max-w-lg text-base font-normal leading-relaxed'>
@@ -70,7 +70,7 @@ export default function Index() {
                 </button>
               </div>
             </div>
-            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row'>
+            <div className='container mx-auto flex max-w-xl flex-col items-baseline gap-5 self-center sm:flex-row '>
               <Image
                 height={500}
                 width={700}
