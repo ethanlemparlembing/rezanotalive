@@ -1,28 +1,32 @@
-import { useState, useEffect, useRef, useCallback } from "react"
+import { useState, useCallback, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import Link from "next/link"
 
-const Accordion = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(null)
-  const contentRefs = useRef([])
+const BodyAccordion = ({ isActive, children }) => {
+  const element = useRef(null)
+
+  const ctx = gsap.context(() => {})
 
   useEffect(() => {
-    const contentElements = contentRefs.current
-    const contentElement = contentElements[activeIndex]
-
-    if (contentElement && activeIndex !== null) {
-      gsap.from(contentElement, {
+    ctx.add(() => {
+      gsap.to(element.current, {
+        height: isActive ? "auto" : 0,
         duration: 1,
-        ease: "power3.out",
-        height: 0,
-        overflow: "hidden",
+        opacity: isActive ? 1 : 0,
+        ease: "expo.inOut",
       })
-    }
+    })
+  }, [ctx, isActive])
 
-    return () => {
-      gsap.killTweensOf(contentElement)
-    }
-  }, [activeIndex])
+  return (
+    <div ref={element} className='flex h-0 flex-col gap-3 overflow-hidden'>
+      {children}
+    </div>
+  )
+}
+
+const Accordion = ({ items }) => {
+  const [activeIndex, setActiveIndex] = useState(null)
 
   const handleClick = useCallback((index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -43,7 +47,7 @@ const Accordion = ({ items }) => {
               <span
                 className={`transform transition-transform duration-300 ${
                   isActive ? "rotate-180" : ""
-                }`}
+                } `}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -61,24 +65,18 @@ const Accordion = ({ items }) => {
                 </svg>
               </span>
             </button>
-            {isActive && (
-              <div
-                ref={(el) => (contentRefs.current[index] = el)}
-                className={`transition-height flex flex-col gap-3 overflow-hidden py-3  ${
-                  isActive ? "h-auto" : "h-0"
-                }`}
-              >
-                {item.content.map((content, contentIndex) => (
-                  <Link
-                    href='/'
-                    className='text-base font-semibold hover:underline'
-                    key={contentIndex}
-                  >
-                    {content}
-                  </Link>
-                ))}
-              </div>
-            )}
+
+            <BodyAccordion isActive={isActive}>
+              {item.content.map((content, contentIndex) => (
+                <Link
+                  href='/'
+                  className='text-base font-semibold hover:underline'
+                  key={contentIndex}
+                >
+                  {content}
+                </Link>
+              ))}
+            </BodyAccordion>
           </div>
         )
       })}
