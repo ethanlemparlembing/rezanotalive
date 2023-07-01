@@ -66,7 +66,7 @@ export default function MobileMenu({ open, timeline, onClose }) {
     >
       <div className='absolute inset-0 flex h-full w-full items-center p-5'>
         <div className='flex w-full flex-col '>
-          {linkItems.map((item, index) => (
+          {linkItems?.map((item, index) => (
             <a
               key={index}
               href={item.href}
