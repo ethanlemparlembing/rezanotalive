@@ -41,7 +41,7 @@ const Accordion = ({ items }) => {
           <div key={index} className='py-5'>
             <button
               onClick={() => handleClick(index)}
-              className='flex w-full justify-between py-2 text-left font-medium focus:outline-none'
+              className='flex w-full justify-between py-2 text-left text-lg font-semibold capitalize focus:outline-none'
             >
               {item.title}
               <span
@@ -70,7 +70,7 @@ const Accordion = ({ items }) => {
               {item.content.map((content, contentIndex) => (
                 <Link
                   href='/'
-                  className='text-base font-semibold hover:underline'
+                  className=' text-lg font-semibold hover:underline'
                   key={contentIndex}
                 >
                   {content}
