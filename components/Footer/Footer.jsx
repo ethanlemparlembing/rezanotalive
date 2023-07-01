@@ -33,7 +33,7 @@ export default function Footer() {
         <div className='flex flex-col gap-10 sm:flex-row'>
           <div className='container mx-auto flex flex-col gap-5 sm:gap-10'>
             <h2 className='text-lg font-bold  md:text-sm lg:text-2xl'>
-              Let&apos;s collaborate! Send me a message, and together, we can
+              Let&#39;s collaborate! Send me a message, and together, we can
               create something amazing.
             </h2>
             <button className='flex w-fit items-center justify-center border-[1.5px] border-white px-3 py-2 text-base font-semibold capitalize hover:bg-white hover:text-black'>

@@ -9,7 +9,6 @@ export default function MobileMenu({ open, onClose }) {
     ctx.add(() => {
       gsap.to(el.current, {
         y: open ? 0 : "-100vh",
-
         duration: 1,
         ease: "power3.out",
       })
