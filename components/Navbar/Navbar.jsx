@@ -1,8 +1,22 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MobileMenu from "./MobileMenu"
+import { gsap } from "gsap"
 
 export default function Navbar() {
   const [openMobile, setOpenMobile] = useState(false)
+  const [tl, setTl] = useState()
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline()
+      setTl(tl)
+    })
+    return () => ctx.revert()
+  }, [])
+
+  useEffect(() => {
+    tl && tl.reversed(!openMobile)
+  }, [openMobile, tl])
 
   const handleOpen = () => {
     setOpenMobile((prev) => !prev)
@@ -39,7 +53,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <MobileMenu open={openMobile} onClose={handleOpen} />
+      <MobileMenu open={openMobile} timeline={tl} onClose={handleOpen} />
     </>
   )
 }
