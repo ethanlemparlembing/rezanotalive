@@ -23,7 +23,7 @@ export default function ButtonUpPage() {
   }
   return (
     <div
-      className={`fixed bottom-0 right-0 p-3 sm:p-5 ${
+      className={`fixed bottom-0 right-0 z-50 p-3 sm:p-5 ${
         showButton ? "block" : "hidden"
       }`}
     >

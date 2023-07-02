@@ -72,14 +72,14 @@ export default function Images({ images }) {
       className='-ml-5 flex w-auto'
       columnClassName='pl-5 bg-clip-padding'
     >
-      {images?.map(({ id, public_id, blurDataUrl }) => (
+      {images?.map(({ id, public_id, src, blurDataUrl }) => (
         <div
           key={id}
           ref={(element) => addElementToObserve(element)}
-          className=' mb-5 h-auto max-w-full break-before-avoid opacity-0 will-change-auto'
+          className=' mb-5 h-auto max-w-full break-before-avoid overflow-hidden border-[1.5px] border-black opacity-0 will-change-auto '
         >
           <Image
-            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.jpg`}
+            src={src}
             width={720}
             height={480}
             priority
@@ -90,7 +90,7 @@ export default function Images({ images }) {
           (max-width: 1536px) 33vw,
           25vw'
             alt={public_id}
-            className='transform rounded-lg object-cover object-center  brightness-90 transition will-change-auto hover:brightness-110'
+            className='transform  object-cover object-center  brightness-100 transition will-change-auto hover:brightness-90'
           />
         </div>
       ))}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import MobileMenu from "./MobileMenu"
 import { gsap } from "gsap"
+import Link from "next/link"
 
 export default function Navbar() {
   const [openMobile, setOpenMobile] = useState(false)
@@ -27,11 +28,14 @@ export default function Navbar() {
       <div className='sticky inset-0 z-10 h-16 w-full border-b-[1.5px] border-black bg-white'>
         <div className='mx-auto flex h-full w-full max-w-6xl flex-row items-center justify-between p-5'>
           <div className=''>
-            <a href='' className='text-base font-bold'>
+            <Link href='/' className='text-base font-bold'>
               Rezanotalive
-            </a>
+            </Link>
           </div>
           <div className='hidden gap-5 sm:flex'>
+            <Link href='/Photos' className='text-base font-semibold'>
+              Photos
+            </Link>
             <a href='' className='text-base font-semibold'>
               link 1
             </a>
