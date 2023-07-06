@@ -1,21 +1,14 @@
+import Link from "next/link"
 import { useEffect, useRef } from "react"
 
 const linkItems = [
   {
-    title: "Link 1",
+    title: "Home",
     href: "/",
   },
   {
-    title: "Link 2",
-    href: "/",
-  },
-  {
-    title: "Link 3",
-    href: "/",
-  },
-  {
-    title: "Link 4",
-    href: "/",
+    title: "Photos",
+    href: "/Photos",
   },
 ]
 
@@ -67,7 +60,7 @@ export default function MobileMenu({ open, timeline, onClose }) {
       <div className='absolute inset-0 flex h-full w-full items-center p-5'>
         <div className='flex w-full flex-col '>
           {linkItems?.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.href}
               ref={(el) => (lineEl.current[index] = el)}
@@ -90,7 +83,7 @@ export default function MobileMenu({ open, timeline, onClose }) {
                   />
                 </svg>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

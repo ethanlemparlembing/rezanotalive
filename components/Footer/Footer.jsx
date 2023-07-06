@@ -1,4 +1,5 @@
 import Accordion from "../Accordion/Accordion"
+import Button from "../Button/Button"
 
 export default function Footer() {
   const accordionItems = [
@@ -36,9 +37,9 @@ export default function Footer() {
               Let&#39;s collaborate! Send me a message, and together, we can
               create something amazing.
             </h2>
-            <button className='flex w-fit items-center justify-center border-[1.5px] border-white px-3 py-2 text-base font-semibold capitalize hover:bg-white hover:text-black'>
+            <Button color='secondary' size='full'>
               get in touch
-            </button>
+            </Button>
           </div>
           <div className='container flex flex-col gap-10 sm:flex-row'>
             <div className='container mx-auto flex max-w-full flex-col justify-between sm:hidden'>

@@ -67,33 +67,35 @@ export default function Images({ images }) {
   }
 
   return (
-    <Masonry
-      breakpointCols={columnsObj}
-      className='-ml-5 flex w-auto'
-      columnClassName='pl-5 bg-clip-padding'
-    >
-      {images?.map(({ id, public_id, src, blurDataUrl }) => (
-        <div
-          key={id}
-          ref={(element) => addElementToObserve(element)}
-          className=' mb-5 h-auto max-w-full break-before-avoid overflow-hidden border-[1.5px] border-black opacity-0 will-change-auto '
-        >
-          <Image
-            src={src}
-            width={720}
-            height={480}
-            priority
-            blurDataURL={blurDataUrl}
-            placeholder='blur'
-            sizes='(max-width: 640px) 100vw,
+    <div className='w-full'>
+      <Masonry
+        breakpointCols={columnsObj}
+        className='-ml-5 flex w-auto '
+        columnClassName='pl-5 bg-clip-padding '
+      >
+        {images?.map(({ id, public_id, blurDataUrl, height, width }) => (
+          <div
+            key={id}
+            ref={(element) => addElementToObserve(element)}
+            className=' mb-5 h-auto max-w-full  break-before-avoid overflow-hidden border-[1.5px] border-black opacity-0 will-change-auto '
+          >
+            <Image
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_auto:best/${public_id}.jpg`}
+              width={width}
+              height={height}
+              priority
+              blurDataURL={blurDataUrl}
+              placeholder='blur'
+              sizes='(max-width: 640px) 100vw,
           (max-width: 1280px) 50vw,
           (max-width: 1536px) 33vw,
           25vw'
-            alt={public_id}
-            className='transform  object-cover object-center  brightness-100 transition will-change-auto hover:brightness-90'
-          />
-        </div>
-      ))}
-    </Masonry>
+              alt={public_id}
+              className='transform  object-cover object-center  brightness-100 transition will-change-auto hover:brightness-90'
+            />
+          </div>
+        ))}
+      </Masonry>
+    </div>
   )
 }

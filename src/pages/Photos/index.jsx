@@ -44,7 +44,7 @@ export default function Photos({ images }) {
 export async function getStaticProps() {
   const results = await cloudinary.v2.search
     .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-    .sort_by("public_id", "desc")
+    .sort_by("public_id", "asc")
     .max_results(500)
     .execute()
 
@@ -71,6 +71,7 @@ export async function getStaticProps() {
   for (let i = 0; i < reducedResults.length; i++) {
     reducedResults[i].blurDataUrl = imagesWithBlurDataUrls[i]
   }
+
   return {
     props: {
       images: reducedResults,
