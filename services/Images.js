@@ -77,7 +77,7 @@ export default function Images({ images }) {
           <div
             key={id}
             ref={(element) => addElementToObserve(element)}
-            className=' mb-5 h-auto max-w-full  break-before-avoid overflow-hidden border-[1.5px] border-black opacity-0 will-change-auto '
+            className=' mb-5 h-fit max-w-full  break-before-avoid overflow-hidden border-[1.5px] border-black opacity-0 will-change-auto '
           >
             <Image
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_auto:best/${public_id}.jpg`}
