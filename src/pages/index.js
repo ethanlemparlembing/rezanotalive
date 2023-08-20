@@ -8,7 +8,7 @@ export default function Index() {
     <Layouts>
       <ButtonUpPage />
       <HeroSection />
-      <div className='mx-auto max-w-6xl space-y-20 px-5 py-20'>
+      {/* <div className='mx-auto max-w-6xl space-y-20 px-5 py-20'>
         <div className='grid min-h-screen place-items-center'>
           <div className='flex w-full flex-col gap-10 lg:flex-row-reverse'>
             <div className='container mx-auto flex max-w-xl items-center'>
@@ -85,7 +85,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Layouts>
   )
 }
